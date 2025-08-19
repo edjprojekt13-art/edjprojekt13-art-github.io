@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body { font-family: 'Inter', sans-serif; }
+.fade-in { animation: fadeIn 0.3s ease-in; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.status-hadir { background: linear-gradient(135deg, #10b981, #059669); }
+.status-sakit { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.status-izin { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.status-alpa { background: linear-gradient(135deg, #ef4444, #dc2626); }
+
+.sidebar-transition { transition: transform 0.3s ease-in-out; }
+
+.print-only { display: none; }
+@media print {
+    .no-print { display: none !important; }
+    .print-only { display: block !important; }
+    body { background: white !important; }
+    main { padding: 0 !important; }
+}
+
+@media (max-width: 768px) {
+    .mobile-card .mobile-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+    .mobile-card .status-btn-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
